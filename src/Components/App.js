@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchPreviews, fetchGenre, fetchShow } from 'src\Services\api.js'; // Import API functions
-import PodcastPreview from './Components/PodcastPreview'; // Import PodcastPreview component
+import PodcastPreview from './PodcastPreview'; // Import PodcastPreview component
 import ShowList from './Components/ShowList'; // Import ShowList component
 import SeasonList from './Components/SeasonList'; // Import SeasonList component
 
