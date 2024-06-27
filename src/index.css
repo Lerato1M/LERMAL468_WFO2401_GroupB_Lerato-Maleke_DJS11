@@ -1,0 +1,91 @@
+/* src/index.css */
+
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles for all components */
+  
+  /* Styles specific to PodcastList component */
+  .podcast-list {
+    max-width: 1000px; /* Limit the width of the podcast list */
+    margin: 0 auto; /* Center align the list horizontally */
+    padding: 20px; /* Add padding around the list */
+  }
+  
+  .filters {
+    display: flex; /* Use flexbox for the filter section */
+    justify-content: space-between; /* Space evenly between filter elements */
+    margin-bottom: 10px; /* Add margin at the bottom of the filters */
+  }
+  
+  .filters select {
+    padding: 8px; /* Padding inside the dropdowns */
+    font-size: 1rem; /* Font size of the dropdown options */
+    border: 1px solid #ccc; /* Light grey border around dropdowns */
+    border-radius: 4px; /* Rounded corners for dropdowns */
+  }
+  
+  .podcast-grid {
+    display: grid; /* Use CSS grid for the podcast grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  /* Styles specific to PodcastItem component */
+  .podcast-item {
+    display: flex; /* Use flexbox for the podcast item */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    border: 1px solid #ccc; /* Light grey border around the item */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the item */
+    margin: 10px; /* Margin around each item */
+    background-color: #f0f0f0; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+    max-width: 200px; /* Limit maximum width of each item */
+    text-align: center; /* Center align text */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .podcast-item:hover {
+    background-color: #ffc0cb; /* Light pink background on hover */
+  }
+  
+  .podcast-image {
+    width: 100%; /* Ensure the image takes up full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+  }
+  
+  .podcast-title {
+    margin-top: 10px; /* Margin on top of the title */
+    font-size: 1.2rem; /* Larger font size for the title */
+    color: #333; /* Dark grey color for the title text */
+    width: 170px; /* Limit width of the title with ellipsis */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+  }
+  
+  .podcast-genre {
+    margin-top: -10px; /* Negative margin to overlap with title */
+    font-size: 1rem; /* Smaller font size for genre */
+    color: #666; /* Medium grey color for genre text */
+    width: 170px; /* Limit width with ellipsis */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+  }
+  
+  .podcast-update {
+    margin-top: -10px; /* Negative margin to overlap with genre */
+    color: #666; /* Medium grey color for update text */
+    white-space: nowrap; /* Prevent wrapping */
+    width: 170px; /* Limit width with ellipsis */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: clip; /* Show clipped text for overflow */
+  }
+  
