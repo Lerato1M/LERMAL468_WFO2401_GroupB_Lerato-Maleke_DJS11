@@ -1,0 +1,61 @@
+/* src/components/PodcastItem.css */
+
+/* Container for each podcast item */
+.podcast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f0f7fc; /* Light blue background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Hover effect for the podcast item */
+.podcast-item:hover {
+  background-color: #dbe9f5; /* Lighter blue on hover */
+}
+
+/* Podcast image styling */
+.podcast-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Styling for the podcast title */
+.podcast-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #1a73e8; /* Blue title */
+  width: 170px;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+}
+
+/* Styling for the podcast genre */
+.podcast-genre {
+  margin-top: -10px; /* Adjust positioning */
+  font-size: 1rem;
+  color: #4285f4; /* Darker blue for genre */
+  width: 170px;
+  white-space: nowrap; /* Prevent genre from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+}
+
+/* Styling for the podcast update text */
+.podcast-update {
+  margin-top: -10px; /* Adjust positioning */
+  color: #4285f4; /* Darker blue for update text */
+  white-space: nowrap; /* Prevent update text from wrapping */
+  width: 170px;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: clip; /* Clip text if it exceeds the width */
+}

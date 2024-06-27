@@ -1,0 +1,133 @@
+/* src/components/FavoritesModal.css */
+
+/* Overlay for the modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 192, 203, 0.5); /* Light pink background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Content area of the modal */
+.modal-content {
+  position: relative;
+  background: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px; /* Limit maximum width */
+  max-height: 80vh; /* Limit maximum height, with vertical scrolling if necessary */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  color: #fa0678; /* Pink text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.modal-content {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Close button for the modal */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #fa0678; /* Pink button background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  z-index: 1001; /* Ensure it's above the modal content */
+}
+
+/* Darken close button on hover */
+.close-button:hover {
+  background-color: #a30000; /* Darker pink on hover */
+}
+
+/* Sorting options text */
+.sort-options {
+  margin-bottom: 20px;
+  color: #fa0678; /* Pink text color */
+}
+
+/* Container for favorites list with vertical scrolling */
+.favorites-list-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Styling for each group of favorites */
+.show-group {
+  margin-bottom: 20px;
+}
+
+.season-group {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* List styling for favorites */
+.favorites-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for each favorite item */
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Heading style within favorite item */
+.favorite-item h5 {
+  margin: 0; /* Remove default margin */
+}
+
+/* Button style within favorite item */
+.favorite-item button {
+  background: #fa0678; /* Pink button background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  padding: 5px 10px; /* Adjust padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Darken button background on hover */
+.favorite-item button:hover {
+  background: #d32f2f; /* Darker pink on hover */
+}
+
+/* Clear all button style */
+.clear-all {
+  background: #fa0678; /* Pink button background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  padding: 5px 10px; /* Adjust padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Darken clear all button background on hover */
+.clear-all:hover {
+  background: #d32f2f; /* Darker pink on hover */
+}

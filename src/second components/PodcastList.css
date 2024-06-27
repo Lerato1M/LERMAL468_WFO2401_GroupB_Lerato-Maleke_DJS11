@@ -1,0 +1,52 @@
+/* src/components/PodcastItem.css */
+
+/* Styling for each podcast item */
+.podcast-item {
+  display: flex; /* Display items in a row */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Padding inside the item */
+  margin: 10px; /* Margin around the item */
+  background-color: #ff69b4; /* Hot pink background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  max-width: 200px; /* Maximum width of the item */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for podcast item */
+.podcast-item:hover {
+  background-color: #ff1493; /* Darker shade of hot pink on hover */
+}
+
+/* Styling for the podcast image */
+.podcast-image {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+/* Styling for the podcast title */
+.podcast-title {
+  margin-top: 10px; /* Top margin */
+  font-size: 1.2rem; /* Larger font size */
+  color: #fff; /* White text color */
+  width: 170px; /* Fixed width */
+  white-space: nowrap; /* No wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+}
+
+/* Styling for the podcast genre and update information */
+.podcast-genre,
+.podcast-update {
+  margin-top: -10px; /* Adjusting top margin */
+  font-size: 1rem; /* Smaller font size */
+  color: #fff; /* White text color */
+  width: 170px; /* Fixed width */
+  white-space: nowrap; /* No wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: clip; /* Clip overflow text */
+}

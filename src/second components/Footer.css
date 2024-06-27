@@ -1,0 +1,29 @@
+/* FavoritesModal.css */
+
+.modal-overlay.pink-theme {
+  background: rgba(250, 247, 247, 0.5); /* Light pink background */
+}
+
+.modal-content {
+  background: #ffffff; /* White background */
+  color: #fa0678; /* Pink text color */
+}
+
+.sort-options label {
+  color: #fa0678; /* Pink text color for label */
+}
+
+.sort-options select {
+  border-color: #fa0678; /* Pink border color for select box */
+}
+
+.show-group h3,
+.season-group h4,
+.favorite-item h5 {
+  color: #fa0678; /* Pink text color for headers and titles */
+}
+
+.favorite-item button,
+.clear-all {
+  background-color: #fa0678; /* Pink background color for buttons */
+}
