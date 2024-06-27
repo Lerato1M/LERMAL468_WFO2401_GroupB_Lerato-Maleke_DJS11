@@ -13,7 +13,7 @@ const Header = ({ onFavoritesClick }) => {
   return (
     <header className="header"> {/* Header container with 'header' class */}
       <div className="logo" onClick={handleLogoClick}> {/* Logo container with clickable functionality */}
-        <img className="logo" src={'/android-chrome-512x512.png'} alt="second components\images\logo.jpg" /> {/* Logo image */}
+        <img className="logo" src={'/android-chrome-512x512.png'} alt="MyLogo" /> {/* Logo image */}
       </div>
       <div className="search-bar"> {/* Search bar container */}
         <input type="text" placeholder="Search..." /> {/* Search input field */}
