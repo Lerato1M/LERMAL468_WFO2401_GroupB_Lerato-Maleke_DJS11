@@ -1,8 +1,6 @@
-// src/App.js
-
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { fetchPreviews, fetchGenre, fetchShow } from ''; // Import API functions
+import { fetchPreviews, fetchGenre, fetchShow } from 'src\Services\api.js'; // Import API functions
 import PodcastPreview from './Components/PodcastPreview'; // Import PodcastPreview component
 import ShowList from './Components/ShowList'; // Import ShowList component
 import SeasonList from './Components/SeasonList'; // Import SeasonList component
@@ -19,20 +17,22 @@ function App() {
         setPreviews(data);
       })
       .catch(error => {
-        console.error('Error fetching previews:', error);
+        console.error('Error fetching previews:', error); // Log error if fetching previews fails
       });
   }, []);
 
+  // Function to handle click on a show
   const handleShowClick = async (showId) => {
     try {
       const showData = await fetchShow(showId); // Fetch details for the selected show
       setSelectedShow(showData);
       setSelectedSeason(null); // Reset selected season when switching shows
     } catch (error) {
-      console.error('Error fetching show details:', error);
+      console.error('Error fetching show details:', error); // Log error if fetching show details fails
     }
   };
 
+  // Function to handle click on a season
   const handleSeasonClick = (seasonId) => {
     setSelectedSeason(seasonId); // Set selected season
   };
@@ -40,8 +40,9 @@ function App() {
   return (
     <div className="App">
       <h1>Podcasts</h1>
+      
+      {/* Render PodcastPreview for each preview */}
       <div className="previews-container">
-        {/* Render PodcastPreview for each preview */}
         {previews.map(preview => (
           <PodcastPreview key={preview.id} preview={preview} />
         ))}
@@ -50,7 +51,7 @@ function App() {
       {/* Render ShowList component */}
       <ShowList onShowClick={handleShowClick} />
 
-      {/* Conditionally render SeasonList if a show is selected */}
+      {/* Conditionally render details for selected show */}
       {selectedShow && (
         <div>
           <h2>{selectedShow.title}</h2>
@@ -63,7 +64,7 @@ function App() {
           {/* Render SeasonList component */}
           <SeasonList seasons={selectedShow.seasons} onSeasonClick={handleSeasonClick} />
 
-          {/* Option to go back to ShowList */}
+          {/* Button to go back to ShowList */}
           <button onClick={() => setSelectedShow(null)}>Back to Shows</button>
         </div>
       )}
@@ -81,6 +82,7 @@ function App() {
               <button onClick={() => console.log(`Playing ${episode.title}`)}>Listen</button>
             </div>
           ))}
+          {/* Button to go back to Seasons */}
           <button onClick={() => setSelectedSeason(null)}>Back to Seasons</button>
         </div>
       )}

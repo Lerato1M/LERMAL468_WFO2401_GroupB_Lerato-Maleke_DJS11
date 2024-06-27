@@ -1,25 +1,29 @@
 /* src/App.css */
 
+/* Styles for the main App container */
 .App {
-  text-align: center;
+  text-align: center; /* Center aligns text within the App */
 }
 
+/* Styles for the container holding podcast previews */
 .previews-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Wrap items to the next line if necessary */
+  justify-content: center; /* Center align items horizontally */
 }
 
+/* Styles for each individual podcast preview */
 .podcast-preview {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  width: 300px;
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside the preview box */
+  margin: 16px; /* Margin around each preview */
+  width: 300px; /* Fixed width for consistent sizing */
 }
 
+/* Styles for images inside podcast previews */
 .podcast-preview img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100%; /* Image takes full width of its container */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 10px; /* Spacing below the image */
 }
